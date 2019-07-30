@@ -9,9 +9,11 @@ const orderRoutes = require("./api/routes/orders");
 
 mongoose.connect('mongodb+srv://nodeshopadmin:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop-ytexf.mongodb.net/test?retryWrites=true&w=majority',
     {
-        useMongoClient: true
+        useNewUrlParser: true
     }
 );
+
+mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({
