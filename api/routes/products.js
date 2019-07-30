@@ -50,16 +50,14 @@ router.post('/', (req, res, next) => {
                 message: 'Handling POST requests to /products',
                 createdProduct: result
             })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json({
-                error: err
-            })
-        })
-    });
-
-    
-})
+                .catch(err => {
+                    console.log(err)
+                    res.status(500).json({
+                        error: err
+                    })
+                })
+        });
+});
 
 //Handle GET request to get a single product by id
 router.get('/:productId', (req, res, next) => {
