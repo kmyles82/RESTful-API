@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "cowboysNation"
+        "MONGO_ATLAS_PW": "cowboysNation",
+        "JWT_KEY": "Secret"
     }
 }
