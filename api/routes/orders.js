@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 const Order = require("../models/order");
 const Product = require("../models/product");
 
-mongoose.set('useCreateIndex', true)
-
 // Handle incoming GET requests to /orders
 router.get("/", (req, res, next) => {
   Order.find()
