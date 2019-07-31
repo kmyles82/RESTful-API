@@ -10,7 +10,8 @@ const userRoutes = require("./api/routes/users")
 
 mongoose.connect('mongodb+srv://nodeshopadmin:' + process.env.MONGO_ATLAS_PW + '@node-rest-shop-ytexf.mongodb.net/test?retryWrites=true&w=majority',
     {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useCreateIndex: true,
     }
 );
 
